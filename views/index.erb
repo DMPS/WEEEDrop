@@ -7,23 +7,31 @@
   <link rel="stylesheet" href="./stylesheets/style.css">
 </head>
 <body>
-  <div class="container pure-g">
+  <div class="container">
+    <div class="pure-menu pure-menu-horizontal">
+    <a href="#" class="pure-menu-heading pure-menu-link">WEEE Drop</a>
+        <ul class="pure-menu-list">
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Recycling</a></li>
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Preferences</a></li>
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">About</a></li>
+        </ul>
+    </div>
     <div class="pure-u-1">
-      <h1 class="center"><%= @recycling[:username] %>'s Badges</h2>
+      <h1 class="center"><%= $recycling[:username] %>'s Badges</h2>
       <p class="center">Keep track of your waste and earn badges when you do!</p>
       <section class="stats">
         <table class="pure-table center">
           <tr>
-            <td>Home location: </td><td><%= @recycling[:location] %></td>
+            <td>Home location: </td><td><%= $recycling[:location] %></td>
           </tr>
           <tr>
-            <td>Visits: </td><td><%= @recycling[:visits] %></td>
+            <td>Visits: </td><td><%= $recycling[:visits] %></td>
           </tr>
           <tr>
-            <td>Local Average: </td><td><%= @recycling[:local_average_visits] %></td>
+            <td>Local Average: </td><td><%= $recycling[:local_average_visits] %></td>
           </tr>
           <tr>
-            <td>Donated amount: </td><td>£<%= sprintf('%.2f', @recycling[:donated_amount]) %></td>
+            <td>Donated amount: </td><td>£<%= sprintf('%.2f', $recycling[:donated_amount]) %></td>
           </tr>
         </table>
       </section>
