@@ -32,9 +32,9 @@ function initMap() {
     center: {lat: 51.50528, lng: -0.08698},
     zoom: 14
   });
-  var infoWindow1 = new google.maps.InfoWindow({map: map}); 
-  var infoWindow2 = new google.maps.InfoWindow({map: map});  
-  var infoWindow3 = new google.maps.InfoWindow({map: map});
+  var infoWindow1 = new google.maps.InfoWindow({}); 
+  var infoWindow2 = new google.maps.InfoWindow({});  
+  var infoWindow3 = new google.maps.InfoWindow({});
 
   var marker = new google.maps.Marker({
     position: myPlace1,
@@ -52,12 +52,12 @@ function initMap() {
     title: 'Place 3'
     });
 //infoWindow1.setPosition(myPlace1);
-infoWindow1.setContent('Place 1');
+infoWindow1.setContent('<p><h4>Place 1</h4></p> <p><b>Opening hours: </b> 08:00-16:00</p>');
 //infoWindow2.setPosition(myPlace2);
-infoWindow2.setContent('Place 2');
+infoWindow2.setContent('<p><h4>Place 2</h4></p> <p><b>Opening hours: </b> 24 hrs</p>');
 //infoWindow3.setPosition(myPlace3);
+infoWindow3.setContent('<p><h4>Place 3</h4></p> <p><b>Opening hours: </b> 09:00-21:00</p>');
     
-infoWindow3.setContent('Place 3');
 marker.addListener('click', function(){infoWindow1.open(map, marker);});   
 marker2.addListener('click', function(){infoWindow2.open(map, marker2);});
 marker3.addListener('click', function(){infoWindow3.open(map, marker3);});
