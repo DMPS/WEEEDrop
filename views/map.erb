@@ -14,6 +14,7 @@
         height: 100%;
       }
     </style>
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/pure-min.css">
   </head>
   <body>
     <div id="map"></div>
@@ -52,11 +53,11 @@ function initMap() {
     title: 'Place 3'
     });
 //infoWindow1.setPosition(myPlace1);
-infoWindow1.setContent('<p><h4>Place 1</h4></p> <p><b>Opening hours: </b> 08:00-16:00</p>');
+infoWindow1.setContent('<p><h4>Place 1</h4></p> <p><b>Opening hours: </b> 08:00-16:00</p><br><a class="pure-button pure-button-primary" href="/drop">Dropped off!</a>');
 //infoWindow2.setPosition(myPlace2);
-infoWindow2.setContent('<p><h4>Place 2</h4></p> <p><b>Opening hours: </b> 24 hrs</p>');
+infoWindow2.setContent('<p><h4>Place 2</h4></p> <p><b>Opening hours: </b> 24 hrs</p><br><a class="pure-button pure-button-primary" href="/drop">Dropped off!</a>');
 //infoWindow3.setPosition(myPlace3);
-infoWindow3.setContent('<p><h4>Place 3</h4></p> <p><b>Opening hours: </b> 09:00-21:00</p>');
+infoWindow3.setContent('<p><h4>Place 3</h4></p> <p><b>Opening hours: </b> 09:00-21:00</p><br><a class="pure-button pure-button-primary" href="/drop">Dropped off!</a>');
     
 marker.addListener('click', function(){infoWindow1.open(map, marker);});   
 marker2.addListener('click', function(){infoWindow2.open(map, marker2);});
